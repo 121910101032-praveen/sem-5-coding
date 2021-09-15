@@ -1,0 +1,55 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled4.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLQSrNxzsu4tVfR8jiT/Ai",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/121910101032-praveen/sem-5-coding/blob/main/Exam\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "mF114hIlXfUj"
+      },
+      "source": [
+        "# case 1\n",
+        "def fact(n):\n",
+        "  if n==0:\n",
+        "    return 1\n",
+        "  else:\n",
+        "    return n*fact(n-1)\n",
+        "\n",
+        "N = int(input(\"Total number of screws: \"))\n",
+        "K = int(input(\"Number of defective screws: \"))\n",
+        "D = int(input(\"Number of screws picked: \"))\n",
+        "\n",
+        "prob = round((fact(N-K)/(fact((N-K)-D)*fact(D)))/(fact(N)/((fact(N-D))*fact(D))),2)\n",
+        "\n",
+        "print(\"The probability of picking 2 perfect screws is: \", prob)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
